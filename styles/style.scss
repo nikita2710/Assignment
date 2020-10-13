@@ -37,6 +37,7 @@ $first-position: 195px;
         font-size: 15px;
         font-weight: 100;
         line-height: 20px;
+        padding: 0px 29%;
     }
     button {
         font-size: 15px;
@@ -169,6 +170,9 @@ $first-position: 195px;
             img {
                 width: 70%;
             }
+            object {
+                width: 80%;
+            }
         }
         .survey--image__mobile {
             display: none;
@@ -211,11 +215,41 @@ $first-position: 195px;
                 max-height: 500px;
                 min-height: 400px;
                 position: relative;
+                .block--popup {
+                    background: #ffffffeb;
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 15px;
+                    border-radius: 6px;
+                    width: 300px;
+                    text-align: left;
+                    padding: 5px;
+                    position: absolute;
+                    top: 44%;
+                    left: 40%;
+                    display: none;
+                    .popup--title {
+                        color: #004991;
+                    }
+                }
                 .block--layer {
                     position: absolute;
                     img {
                         margin: auto;
                         width: 100%;
+                    }
+                    .block--info {
+                        top: 62%;
+                        position: absolute;
+                        left: 34%;
+                        cursor: pointer;
+                        &:hover + .block--popup {
+                                display: block;
+                        }
+                        &:hover .more {
+                            background: #004991;
+                            color: #fff;
+                            content : '-';
+                        }
                     }
                     .block--layer__info {
                         font-family: "Open Sans", sans-serif;
@@ -300,6 +334,7 @@ $first-position: 195px;
                 padding: 12px 64px;
                 font-weight: 600;
                 margin-top: 35px;
+                margin-bottom: 100px;
             }
         }
     }
@@ -319,6 +354,7 @@ $first-position: 195px;
     }
     #hero-container p {
         font-size: 14px;
+        padding: 0px;
     }
     #hero-container button {
         font-size: 14px;
@@ -354,6 +390,9 @@ $first-position: 195px;
             .survey--image__mobile {
                 display: block;
                 width: 100%;
+                object {    
+                    width: 90%;
+                }
             }
             .survey--image__desktop {
                 display: none;
@@ -382,6 +421,10 @@ $first-position: 195px;
                 }
                 .block--layers {
                     min-height: 360px;
+                    .block--popup {
+                        left: unset;
+                        width: 50%;
+                    }
                     .block--layer {
                         left: -89%;
                         .block--info {
@@ -390,10 +433,32 @@ $first-position: 195px;
                             left: 30%;
                         }
                         .block--layer__info {
-                            font-size: 12px;
+                            font-size: 11px;
                             font-weight: 600;
-                            padding: 4px 10px;
+                            padding: 3px 6px;
                         }
+                        .more {
+                            padding: 4px;
+                            width: 10px;
+                            height: 10px;
+                            line-height: 11px;
+                        }
+                        .border-inner {
+                            padding: 0px 1px 2px 1px;
+                        }
+                        .border-outer {
+                            padding: 3px 2px 5px 2px;
+                        }
+                    }
+                }
+                .layers--first {
+                    margin-top: 52px;
+                    .block--layer .block--info {
+                        left: 43%;
+                    }
+                    .block--layer .border-outer {
+                        float: right;
+                        margin-left: 3px;
                     }
                 }
                 .layers--lux {

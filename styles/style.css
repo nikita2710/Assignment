@@ -27,7 +27,8 @@
     color: #fff;
     font-size: 15px;
     font-weight: 100;
-    line-height: 20px; }
+    line-height: 20px;
+    padding: 0px 29%; }
   #hero-container button {
     font-size: 15px;
     padding: 12px 64px;
@@ -132,6 +133,8 @@
       width: 40%; }
       .survey .survey--content .survey--img img {
         width: 70%; }
+      .survey .survey--content .survey--img object {
+        width: 80%; }
     .survey .survey--content .survey--image__mobile {
       display: none; }
 
@@ -165,11 +168,36 @@
         max-height: 500px;
         min-height: 400px;
         position: relative; }
+        .product .product--details .block .block--layers .block--popup {
+          background: #ffffffeb;
+          font-family: "Open Sans", sans-serif;
+          font-size: 15px;
+          border-radius: 6px;
+          width: 300px;
+          text-align: left;
+          padding: 5px;
+          position: absolute;
+          top: 44%;
+          left: 40%;
+          display: none; }
+          .product .product--details .block .block--layers .block--popup .popup--title {
+            color: #004991; }
         .product .product--details .block .block--layers .block--layer {
           position: absolute; }
           .product .product--details .block .block--layers .block--layer img {
             margin: auto;
             width: 100%; }
+          .product .product--details .block .block--layers .block--layer .block--info {
+            top: 62%;
+            position: absolute;
+            left: 34%;
+            cursor: pointer; }
+            .product .product--details .block .block--layers .block--layer .block--info:hover + .block--popup {
+              display: block; }
+            .product .product--details .block .block--layers .block--layer .block--info:hover .more {
+              background: #004991;
+              color: #fff;
+              content: '-'; }
           .product .product--details .block .block--layers .block--layer .block--layer__info {
             font-family: "Open Sans", sans-serif;
             color: #004991;
@@ -233,7 +261,8 @@
         font-size: 14px;
         padding: 12px 64px;
         font-weight: 600;
-        margin-top: 35px; }
+        margin-top: 35px;
+        margin-bottom: 100px; }
 
 @media only screen and (max-width: 767px) {
   body {
@@ -248,7 +277,8 @@
     font-size: 35px; }
 
   #hero-container p {
-    font-size: 14px; }
+    font-size: 14px;
+    padding: 0px; }
 
   #hero-container button {
     font-size: 14px;
@@ -277,6 +307,8 @@
   .survey .survey--content .survey--image__mobile {
     display: block;
     width: 100%; }
+    .survey .survey--content .survey--image__mobile object {
+      width: 90%; }
   .survey .survey--content .survey--image__desktop {
     display: none; }
   .survey .survey--content .survey--stats__blue {
@@ -296,6 +328,9 @@
       padding: 12px 26px; }
     .product .product--details .block .block--layers {
       min-height: 360px; }
+      .product .product--details .block .block--layers .block--popup {
+        left: unset;
+        width: 50%; }
       .product .product--details .block .block--layers .block--layer {
         left: -89%; }
         .product .product--details .block .block--layers .block--layer .block--info {
@@ -303,9 +338,25 @@
           top: 55%;
           left: 30%; }
         .product .product--details .block .block--layers .block--layer .block--layer__info {
-          font-size: 12px;
+          font-size: 11px;
           font-weight: 600;
-          padding: 4px 10px; }
+          padding: 3px 6px; }
+        .product .product--details .block .block--layers .block--layer .more {
+          padding: 4px;
+          width: 10px;
+          height: 10px;
+          line-height: 11px; }
+        .product .product--details .block .block--layers .block--layer .border-inner {
+          padding: 0px 1px 2px 1px; }
+        .product .product--details .block .block--layers .block--layer .border-outer {
+          padding: 3px 2px 5px 2px; }
+    .product .product--details .block .layers--first {
+      margin-top: 52px; }
+      .product .product--details .block .layers--first .block--layer .block--info {
+        left: 43%; }
+      .product .product--details .block .layers--first .block--layer .border-outer {
+        float: right;
+        margin-left: 3px; }
     .product .product--details .block .layers--lux .block--layer .block--info {
       right: 39%;
       left: unset; }
